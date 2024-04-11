@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV and Add Data</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Student Data Management</h1>
+        <form id="uploadForm" class="mb-3">
+            <div class="form-group">
+                <h2 for="fileInput">Upload CSV:</h2>
+                <input type="file" class="form-control-file" id="fileInput" accept=".csv">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+
+        <h2>Add Data</h2>
+        <form id="addDataForm" class="mb-3">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Data</button>
+        </form>
+        <br />
+        <div id="editFormContainer" style="display: none;">
+            <h2>Edit Data</h2>
+            <form id="editDataForm">
+                <input type="hidden" id="editId" name="id">
+                <div class="form-group">
+                    <label for="editName">Name:</label>
+                    <input type="text" class="form-control" id="editName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editSubject">Subject:</label>
+                    <input type="text" class="form-control" id="editSubject" name="subject" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+        <br />
+        <div id="dataContainer"></div>
+
+        <button onclick="deleteLocalStorage()" class="btn btn-danger mb-3">Delete Local Storage</button>
+    </div>
+
+    <div class="container">
+        
+        <p class="text-uppercase">Instructions</p>
+        <label>- Please only upload CVS files</label><br>
+        <label>- Your CVS files should have a Name and Subject Header</label><br>
+        <label>- You can use my provided CVS format to make sure it's running properly</label><br>
+        <label>- Console log will show your previous localstorage json and updated localstorage json</label><br>
+        <label>- This website can create, update, read, and delete data</label><br>
+    
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
