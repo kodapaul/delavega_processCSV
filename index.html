@@ -10,15 +10,19 @@
 
 <body>
     <div class="container mt-5">
-        <h1>Student Data Management</h1>
-        <form id="uploadForm" class="mb-3">
-            <div class="form-group">
-                <h2 for="fileInput">Upload CSV:</h2>
-                <input type="file" class="form-control-file" id="fileInput" accept=".csv">
-            </div>
-            <button type="submit" class="btn btn-primary">Upload</button>
-        </form>
+        <div>
+            <h1>Student Data Management</h1>
+            <form id="uploadForm" class="mb-3">
+                <div class="form-group">
+                    <h2 for="fileInput">Upload CSV:</h2>
+                    <input type="file" class="form-control-file" id="fileInput" accept=".csv">
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <a href="Test1.csv" download="data.json" class="btn btn-danger">Download CSV File format</a>
 
+        </div>
+        <br>
         <h2>Add Data</h2>
         <form id="addDataForm" class="mb-3">
             <div class="form-group">
@@ -54,14 +58,14 @@
     </div>
 
     <div class="container">
-        
+
         <p class="text-uppercase">Instructions</p>
         <label>- Please only upload CVS files</label><br>
         <label>- Your CVS files should have a Name and Subject Header</label><br>
         <label>- You can use my provided CVS format to make sure it's running properly</label><br>
         <label>- Console log will show your previous localstorage json and updated localstorage json</label><br>
         <label>- This website can create, update, read, and delete data</label><br>
-    
+
     </div>
 
 
